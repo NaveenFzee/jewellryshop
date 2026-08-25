@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # [Your Jewellery Shop] — Website
 
 A Next.js 15 + TypeScript + Tailwind + Supabase jewellery storefront with a live gold/silver rate
@@ -202,3 +203,7 @@ This catches the most common "silent breakage" categories in a multi-file AI-gen
 but it is **not** a substitute for actually running the build. Run `npm run build` yourself before
 deploying, and treat the first error you see as completely normal for a project this size — fix
 forward from there.
+=======
+# jewellryshop
+New jewellry shop website
+>>>>>>> 10ef497a198ac6a92a077b7f11da4b71e69e352b
