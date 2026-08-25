@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-ink-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ink text-ivory font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  /* Visible keyboard focus everywhere — never remove outline without replacing it */
+  :focus-visible {
+    outline: 2px solid #C9A35B;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Small-caps hallmark-stamp style label, used for eyebrows/badges */
+  .label-stamp {
+    @apply font-label text-[11px] tracking-[0.2em] uppercase text-champagne;
+  }
+
+  /* Glassmorphism card used across ink sections */
+  .glass-card {
+    @apply relative rounded-2xl border border-champagne/20 bg-white/[0.04] backdrop-blur-xl;
+  }
+  .glass-card::before {
+    content: "";
+    @apply absolute inset-0 rounded-2xl pointer-events-none;
+    background: linear-gradient(135deg, rgba(201,163,91,0.15), transparent 40%);
+  }
+
+  /* Warm ivory section card (used inside ivory sections) */
+  .ivory-card {
+    @apply rounded-2xl border border-champagne/25 bg-white shadow-[0_1px_0_rgba(201,163,91,0.4)];
+  }
+
+  .section-ink {
+    @apply bg-ink text-ivory;
+  }
+  .section-ivory {
+    @apply bg-ivory text-ink;
+  }
+
+  .gold-divider {
+    @apply h-px w-16 bg-gold-gradient;
+  }
+
+  /* Tabular numerals for the rate board */
+  .rate-digits {
+    @apply font-mono tabular-nums;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
